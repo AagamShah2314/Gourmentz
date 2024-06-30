@@ -31,9 +31,10 @@ html{
 
 .res-card{
     padding: 5px 5px;
-    width: 100px;
-    height: 200px;
+    width: 140px;
+    height: 240px;
     background-color: #ffcccc;
+    margin: 5px 2px;
 }
 .res-card:hover{
     border: solid 1px black;
@@ -44,7 +45,7 @@ html{
 }
 .res-logo{
     width: 100%;
-    height: 50px;
+    height: 80px;
     border: solid 1px black;
 }
 
@@ -52,14 +53,21 @@ html{
     text-align: center;
 }
 
+h3{
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
 h4{
-    font-size: 10px;
+    font-size: 0.7em;
     color: rgb(36, 34, 34);
+    box-sizing: border-box;
 }
 
 h5{
-    font-size: 10px;
+    font-size: 0.5em;
     color: rgb(127, 122, 122);
     display: flex;
     justify-content: space-evenly;
+    box-sizing: border-box;
 }
