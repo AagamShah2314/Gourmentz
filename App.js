@@ -1340,7 +1340,6 @@ const RestaurantCard = (props) => {
                 <img className='res-logo' src={'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'+resData.info.cloudinaryImageId} alt='res-img' />
             </div>
             <div className='res-info'>
-                    {console.log(resData)}
                 <h3>{resData.info.name}</h3>
                 <h4>{resData.info.cuisines.join(', ')}</h4>
                 <h5><span>{resData.info.avgRating} stars</span><span>{resData.info.sla.slaString}</span></h5>
@@ -1354,20 +1353,10 @@ const Body = () => {
         <div className='body'>
             <div className='Search'>Search</div>
             <div className='res-container'>
-                <RestaurantCard  resData = {resList[0]}/>
-                <RestaurantCard  resData = {resList[1]}/>
-                <RestaurantCard  resData = {resList[2]}/>
-                <RestaurantCard  resData = {resList[3]}/>
-                <RestaurantCard  resData = {resList[4]}/>
-                <RestaurantCard  resData = {resList[5]}/>
-                <RestaurantCard  resData = {resList[6]}/>
-                <RestaurantCard  resData = {resList[7]}/>
-                <RestaurantCard  resData = {resList[8]}/>
-                <RestaurantCard  resData = {resList[9]}/>
-                <RestaurantCard  resData = {resList[10]}/>
-                <RestaurantCard  resData = {resList[11]}/>
-                <RestaurantCard  resData = {resList[12]}/>
-                <RestaurantCard  resData = {resList[13]}/>
+                {
+                    //Never use indexes as key for maps(not recommended)
+                    resList.map(restaurant => <RestaurantCard key={restaurant.info.id} resData={restaurant} />  )
+                }
             </div>
         </div>
     );
